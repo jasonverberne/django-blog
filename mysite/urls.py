@@ -21,8 +21,6 @@ urlpatterns = [
     path('polling/', include('polling.urls')),
     path('admin/', admin.site.urls),
     path('', include('blogging.urls')),
-    path('', include('blogging.urls')),  # <- already there
-    path('admin/', admin.site.urls),   # <- already there
     path('login/', LoginView.as_view(template_name='login.html'), name="login"),
     path('logout/', LogoutView.as_view(next_page='/'), name="logout"),
 ]
